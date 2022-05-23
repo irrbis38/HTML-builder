@@ -184,7 +184,7 @@ async function bundleHTML() {
 
   for (let i = 0; i < arr.length; i++) {
     if (!arr[i].includes("{{")) {
-      finalBundle.push(arr[i]);
+      finalBundle.push(arr[i] + " ");
     } else {
       let s = arr[i].match(/{{\w+}}/gi)[0];
       let subStr = s.slice(2, s.length - 2);
